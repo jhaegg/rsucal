@@ -71,7 +71,7 @@ def convert_to_internal(data):
 
 
 def row_id(row):
-    return f"{row["Grant Number"]}-{row["Vest Period"]}"
+    return f"{row['Grant Number']}-{row['Vest Period']}"
 
 
 def format_rows(data):
@@ -115,7 +115,7 @@ def get_exchange_rate(date):
         response = json.load(f)
 
     if response[-1]["date"] != date:
-        print(f"WARNING: Using exchange rate from {response[-1]["date"]} for {date}")
+        print(f"WARNING: Using exchange rate from {response[-1]['date']} for {date}")
 
     return response[-1]["value"]
 
